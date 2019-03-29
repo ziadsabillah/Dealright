@@ -1,0 +1,28 @@
+.column {
+    float: left;
+    width: 25%;
+
+    margin-top: 50px;
+}
+.row::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.trust-badges {
+    background-color: rgb(240, 238, 238);
+    text-align: center;
+
+    padding: 50px 0;
+}
+.trust-badges h3 {
+    font-family: 'Karla', sans-serif;
+    font-size: 25px;
+    font-weight: 200;
+}
+.trust-badges img {
+    width: 100px;
+    height: 105px;
+}
+
+

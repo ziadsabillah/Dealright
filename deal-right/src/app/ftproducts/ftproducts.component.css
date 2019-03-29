@@ -1,0 +1,28 @@
+.ft-products {
+    margin: 30px 120px;
+    text-align: center;
+}
+
+#header {
+    font-family: 'Karla', sans-serif;
+    font-size: 35px;
+}
+.row::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.product {
+    float: left;
+    width: 50%;
+}
+
+img {
+    width: 23em;
+    height: 23em;
+}
+
+
+
+
