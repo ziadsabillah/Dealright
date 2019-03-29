@@ -8,6 +8,7 @@ import { FtproductsComponent } from './ftproducts/ftproducts.component';
 import { HeroComponent } from './hero/hero.component';
 import { TrustBadgesComponent } from './trust-badges/trust-badges.component';
 import { FooterComponent } from './footer/footer.component';
+import { NewsletterformComponent } from './newsletterform/newsletterform.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FooterComponent } from './footer/footer.component';
     FtproductsComponent,
     HeroComponent,
     TrustBadgesComponent,
-    FooterComponent
+    FooterComponent,
+    NewsletterformComponent
   ],
   imports: [
     BrowserModule,

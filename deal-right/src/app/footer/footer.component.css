@@ -1,0 +1,56 @@
+footer {
+    background-color: darkslategray;
+    height: 200px;
+    color: #fff;
+    font-family: 'Karla', sans-serif;
+}
+
+#main {
+    margin-top: 45px;
+}
+.row {
+    height: 100%;
+    padding: 0 25px;
+}
+
+.row::after {
+    content: '';
+    display:table;
+    clear: both;
+}
+
+.links {
+    float: left;
+    width: 25%;
+    height: 100%;
+    color: #fff;
+    padding-top: 25px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+li {
+    margin: 10px 0;
+}
+
+p {
+    color: gray;
+}
+
+img {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+}
+
+
+
