@@ -23,6 +23,20 @@ img {
     height: 23em;
 }
 
+button {
+    background-color: rgb(29, 62, 170);
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: rgb(46, 90, 235);
+    cursor: pointer;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
 
 
 

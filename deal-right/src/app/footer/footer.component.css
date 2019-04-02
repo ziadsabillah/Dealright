@@ -1,6 +1,5 @@
 footer {
     background-color: darkslategray;
-    height: 200px;
     color: #fff;
     font-family: 'Karla', sans-serif;
 }
@@ -10,7 +9,7 @@ footer {
 }
 .row {
     height: 100%;
-    padding: 0 25px;
+    padding: 25px 25px 0 25px;
 }
 
 .row::after {
@@ -24,7 +23,6 @@ footer {
     width: 25%;
     height: 100%;
     color: #fff;
-    padding-top: 25px;
 }
 
 ul {
@@ -47,9 +45,13 @@ p {
 }
 
 img {
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
     margin: 0 10px;
+}
+
+a:hover {
+    color: rgb(201, 201, 201);
 }
 
 
