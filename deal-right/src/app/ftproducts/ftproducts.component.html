@@ -3,8 +3,8 @@
   <div class="row">
       <div *ngFor="let product of products; let i = index"class="product">
           <img src="{{product.img_url}}">
-          <p>{{product.name}} - <strong>{{product.price}}</strong></p>
-          <button (click)="addProductToCart(i)">Add to cart</button>
+          <p>{{product.name}} - <strong>{{product.price}}$</strong></p>
+          <button (click)="addProductToCart(product.id)">Add to cart</button>
       </div>
   </div>
 </div>

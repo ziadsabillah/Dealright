@@ -1,0 +1,25 @@
+
+<!--The Modal-->
+<div [className]="modal_isOpen ? 'addtocart_model_open' : 'addtocart_modal'" id="myModal">
+<!--Modal Content-->
+  <div class="modal_content">
+    <header>
+      <span class="close" (click)="changeModalStatus(false)">&times;</span>
+      <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
+      <h3>Successfully Added To Cart</h3>
+    </header>
+    <div *ngFor="let product of products" class="products">
+      <tr class="product_info">
+        <td>
+          <img src="{{product.img_url}}">
+        </td>
+        <td>
+          <h6>{{product.name}}</h6>
+          <p>Qty: {{product.quantity}}</p>
+        </td>
+        <td>
+          
+        </td>
+      </tr>
+  </div>
+</div>

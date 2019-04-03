@@ -17,6 +17,8 @@ import { NewsletterformComponent } from './newsletterform/newsletterform.compone
 import { EmailListService } from './email-list.service';
 import { ProductDataService } from './product-data.service';
 import { CartService } from './cart.service';
+import { AddtocartModalComponent } from './addtocart-modal/addtocart-modal.component';
+import { ModalService } from './modal.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import { CartService } from './cart.service';
     HeroComponent,
     TrustBadgesComponent,
     FooterComponent,
-    NewsletterformComponent
+    NewsletterformComponent,
+    AddtocartModalComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +39,7 @@ import { CartService } from './cart.service';
     FormsModule,
     HttpClientModule
   ],
-  providers: [EmailListService, ProductDataService, CartService],
+  providers: [EmailListService, ProductDataService, CartService, ModalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
