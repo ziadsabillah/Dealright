@@ -9,31 +9,31 @@ export class ProductDataService {
   ft_products = [
     {
       "id": 0,
-      "name": "Product 1",
+      "name": "Magical Trio Peeler™",
       "price": 24.99,
       "available": true,
       "img_url": "../../assets/product1.jpg",
       "quantity": 1
     }, {
       "id": 1,
-      "name": "Product 2",
+      "name": "Super Absorbent Doormat™",
       "price": 34.99,
       "available": true,
       "img_url": "../../assets/product2.jpg",
       "quantity": 1
     }, {
       "id": 2,
-      "name": "Product 3",
+      "name": "TakIt™ Efficient Makeup Bag",
       "price": 44.99,
       "available": true,
-      "img_url": "../../assets/product1.jpg",
+      "img_url": "../../assets/makeupbag.jpg",
       "quantity": 1
-    }, {
+    },  {
       "id": 3,
-      "name": "Product 4",
+      "name": "Wrinkle-Free™ Eye Gel",
       "price": 54.99,
       "available": true,
-      "img_url": "../../assets/product2.jpg",
+      "img_url": "../../assets/eyegel.jpg",
       "quantity": 1
 
     }
@@ -42,31 +42,31 @@ export class ProductDataService {
   all_products = [
     {
       "id": 0,
-      "name": "Product 1",
+      "name": "Magical Trio Peeler™",
       "price": 24.99,
       "available": true,
       "img_url": "../../assets/product1.jpg",
       "quantity": 1
     }, {
       "id": 1,
-      "name": "Product 2",
+      "name": "Super Absorbent Doormat™",
       "price": 34.99,
       "available": true,
       "img_url": "../../assets/product2.jpg",
       "quantity": 1
     }, {
       "id": 2,
-      "name": "Product 3",
+      "name": "TakIt™ Efficient Makeup Bag",
       "price": 44.99,
       "available": true,
-      "img_url": "../../assets/product1.jpg",
+      "img_url": "../../assets/makeupbag.jpg",
       "quantity": 1
     }, {
       "id": 3,
-      "name": "Product 4",
+      "name": "Wrinkle-Free™ Eye Gel",
       "price": 54.99,
       "available": true,
-      "img_url": "../../assets/product2.jpg",
+      "img_url": "../../assets/eyegel.jpg",
       "quantity": 1
 
     }
@@ -75,6 +75,6 @@ export class ProductDataService {
   constructor(private http: HttpClient) { }
 
   getData() {
-    return this.all_products;
+    return this.ft_products;
   }
 }
