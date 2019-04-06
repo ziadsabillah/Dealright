@@ -38,6 +38,24 @@ nav li {
     position: relative;
 }
 
+nav .cart {
+    display: inline-block;
+    margin-left: 20px;
+    font-weight: 300;
+    padding-top: 25px;
+}
+
+nav .cart:hover {
+    font-weight: 900;
+    cursor: pointer;
+}
+
+nav .cart h6 {
+    margin: 0;
+    display: inline;
+    font-size: 15px;
+}
+
 nav a {
     color: #444;
     text-decoration: none;
@@ -64,3 +82,10 @@ nav a::before {
 nav a:hover::before {
     width: 100%;
 }
+nav ul img {
+    width: 20px;
+    height: 20px;
+    vertical-align: sub;
+    margin-left: 50px;
+    margin-right: 10px;
+ }

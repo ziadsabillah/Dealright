@@ -15,12 +15,40 @@
         </td>
         <td class="column">
           <h6 class="product-title">{{product.name}}</h6>
-          <p>Qty: {{product.quantity}}</p>
+          <p>Qty: 
+            <mat-form-field>
+              <input matInput type="number" (change)="checkCartEmpty()" required step="1" min="1" max="''" name="quantity" [(ngModel)]="product.quantity">
+            </mat-form-field>
+          </p>
         </td>
         <td  class="price column">
           <h6>Price</h6>
           <p>{{product.price * product.quantity}}$</p>
         </td>
       </tr>
-  </div>
+    </div>
+    <footer>
+      <div class="row">
+        <div class="item-count">
+          <h5>{{getCartCount()}} Item(s) in your cart</h5>
+        </div>
+        <div class="item-price">
+          <h6>Total:</h6>
+          <p>{{getTotalPrice()}}$</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="item">
+          <button mat-button id="continue_btn" (click)="changeModalStatus(false)">Continue Shopping</button>
+        </div>
+        <div class="item" *ngIf="!cartEmpty ; else elseBlock">
+            <a routerLink="/checkout"><button mat-stroked-button id="checkout_btn">Checkout</button></a>
+        </div>
+        <ng-template #elseBlock>
+            <div class="item">
+                <a routerLink="/checkout"><button mat-stroked-button disabled id="checkout_disabled">Checkout</button></a>
+            </div>
+        </ng-template>
+      </div>
+    </footer>
 </div>

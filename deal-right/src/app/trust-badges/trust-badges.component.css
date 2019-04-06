@@ -1,8 +1,8 @@
 .column {
     float: left;
     width: 25%;
-
-    margin-top: 50px;
+    margin-top: 30px;
+    background-repeat: no-repeat;
 }
 .row::after {
     content: '';
@@ -12,8 +12,7 @@
 .trust-badges {
     background-color: #F6F6F6;
     text-align: center;
-
-    padding: 50px 0;
+    padding: 20px 0;
 }
 .trust-badges h3 {
     font-family: 'Karla', sans-serif;

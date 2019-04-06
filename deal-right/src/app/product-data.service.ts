@@ -68,13 +68,47 @@ export class ProductDataService {
       "available": true,
       "img_url": "../../assets/eyegel.jpg",
       "quantity": 1
-
+    },
+    {
+      "id": 4,
+      "name": "NoMess™ Smart Beard Cape",
+      "price": 19.99,
+      "available": true,
+      "img_url": "../../assets/beard.jpg",
+      "quantity": 1
+    }, {
+      "id": 5,
+      "name": "EasyCard™ Iphone Card Holder",
+      "price": 14.99,
+      "available": true,
+      "img_url": "../../assets/card-holder.jpg",
+      "quantity": 1
+    },
+    {
+      "id": 6,
+      "name": "Hamilton™ Portable Blender for Women",
+      "price": 25.99,
+      "available": true,
+      "img_url": "../../assets/blender.jpg",
+      "quantity": 1
+    },
+    {
+      "id": 7,
+      "name": "Classic & Stylish Eyewear",
+      "price": 19.99,
+      "available": true,
+      "img_url": "../../assets/eyewear.jpg",
+      "quantity": 1
     }
   ]
 
   constructor(private http: HttpClient) { }
 
-  getData() {
+  getFeaturedProducts() {
     return this.ft_products;
+  }
+
+  getAllProducts() {
+    return this.all_products;
   }
 }
