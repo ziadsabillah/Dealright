@@ -22,10 +22,17 @@ const routes: Routes = [
     path: 'checkout',
     component: CheckoutComponent
   },
-  
   {
     path: 'shopping-cart',
     component: ShoppingCartComponent
+  },
+  {
+    path: 'contact',
+    loadChildren: '../app/contact/contact.module#ContactModule'
+  },
+  {
+    path: 'about',
+    loadChildren: '../app/about/about.module#AboutModule'
   }
 ];
 
