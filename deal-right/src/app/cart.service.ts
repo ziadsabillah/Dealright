@@ -43,10 +43,6 @@ export class CartService {
     return this.cart;
   }
 
-  setCart(products: Array<Object>) {
-    this.cart = products;
-    console.log("Modal OnDestroy");
-  }
 
   
 

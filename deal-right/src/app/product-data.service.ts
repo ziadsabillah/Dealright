@@ -46,28 +46,32 @@ export class ProductDataService {
       "price": 24.99,
       "available": true,
       "img_url": "../../assets/product1.jpg",
-      "quantity": 1
+      "quantity": 1,
+      "isFeatured": true
     }, {
       "id": 1,
       "name": "Super Absorbent Doormat™",
       "price": 34.99,
       "available": true,
       "img_url": "../../assets/product2.jpg",
-      "quantity": 1
+      "quantity": 1,
+      "isFeatured": true
     }, {
       "id": 2,
       "name": "TakIt™ Efficient Makeup Bag",
       "price": 44.99,
       "available": true,
       "img_url": "../../assets/makeupbag.jpg",
-      "quantity": 1
+      "quantity": 1,
+      "isFeatured": true
     }, {
       "id": 3,
       "name": "Wrinkle-Free™ Eye Gel",
       "price": 54.99,
       "available": true,
       "img_url": "../../assets/eyegel.jpg",
-      "quantity": 1
+      "quantity": 1,
+      "isFeatured": true
     },
     {
       "id": 4,
@@ -75,14 +79,16 @@ export class ProductDataService {
       "price": 19.99,
       "available": true,
       "img_url": "../../assets/beard.jpg",
-      "quantity": 1
+      "quantity": 1,
+      "isFeatured": false
     }, {
       "id": 5,
       "name": "EasyCard™ Iphone Card Holder",
       "price": 14.99,
       "available": true,
       "img_url": "../../assets/card-holder.jpg",
-      "quantity": 1
+      "quantity": 1,
+      "isFeatured": false
     },
     {
       "id": 6,
@@ -90,7 +96,8 @@ export class ProductDataService {
       "price": 25.99,
       "available": true,
       "img_url": "../../assets/blender.jpg",
-      "quantity": 1
+      "quantity": 1,
+      "isFeatured": false
     },
     {
       "id": 7,
@@ -98,7 +105,8 @@ export class ProductDataService {
       "price": 19.99,
       "available": true,
       "img_url": "../../assets/eyewear.jpg",
-      "quantity": 1
+      "quantity": 1,
+      "isFeatured": false
     }
   ]
 

@@ -112,6 +112,7 @@ td:nth-of-type(2) {
     width: 80%;
 }
 
+
 /* Getting the image and title the other components in a row and column order */
 
 .row::after {

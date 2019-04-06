@@ -15,10 +15,6 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'home/catalog',
-    component: CatalogComponent
-  },
-  {
     path: 'catalog',
     component: CatalogComponent
   },

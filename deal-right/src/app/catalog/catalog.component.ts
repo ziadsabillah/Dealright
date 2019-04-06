@@ -14,19 +14,21 @@ export class CatalogComponent implements OnInit {
   products = []
   modal_isOpen = false
   _subscription_modal: Subscription
+  _subscription_addtocartIndex: Subscription
   addedtocart_index: number
 
   constructor(private cart: CartService, private product_service: ProductDataService, private modal: ModalService) { }
 
   ngOnInit() {
-    this.modal.changeModalStatus(false);
+    this.modal.changeModalStatus(false, false);
     this.products = this.product_service.getAllProducts();
     this._subscription_modal = this.modal.modal_isOpen.subscribe(modal_isOpen =>this.modal_isOpen = modal_isOpen);
-    this.modal.addedtocart_index.subscribe(addedtocart_index => this.addedtocart_index = addedtocart_index);
+    this._subscription_addtocartIndex = this.modal.addedtocart_index.subscribe(addedtocart_index => this.addedtocart_index = addedtocart_index);
   }
 
   ngOnDestroy() {
     this._subscription_modal.unsubscribe;
+    this._subscription_addtocartIndex.unsubscribe;
   }
 
   addProductToCart(index: number) {
@@ -36,7 +38,7 @@ export class CatalogComponent implements OnInit {
   }
 
   openModal() {
-    this.modal.changeModalStatus(true);
+    this.modal.changeModalStatus(true, false);
     console.log("changed modal status to true");
   }
 
