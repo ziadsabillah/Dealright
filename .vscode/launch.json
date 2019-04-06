@@ -8,7 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}\\deal-right\\src\\app\\ftproducts\\ftproducts.component.ts",
+            "program": "${workspaceFolder}\\deal-right\\src\\app\\ftproducts\\ftproducts.component",
             "outFiles": [
                 "${workspaceFolder}/**/*.js"
             ]
