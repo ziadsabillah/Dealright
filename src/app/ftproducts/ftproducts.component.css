@@ -1,0 +1,47 @@
+.ft-products {
+    margin: 30px 120px;
+    text-align: center;
+}
+
+#header {
+    font-family: 'Karla', sans-serif;
+    font-size: 35px;
+}
+.row::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.product {
+    float: left;
+    width: 50%;
+    margin:30px 0;
+}
+
+img {
+    width: 15em;
+    height: 15em;
+    margin-top: 20px;
+}
+
+button {
+    padding: 2px 16px;
+    margin: 10px 5px;
+    font-family: 'Karla', sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+button:first-of-type {
+    border: 1px solid #2962ff;
+    color: black;
+}
+button:nth-of-type(2) {
+    background-color: #2962ff;
+    color: white;
+}
+
+
+
+
+

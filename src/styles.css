@@ -1,0 +1,13 @@
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+body {
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 300;
+    height: 100%;
+}
+html {
+
+    height: 100%;
+}
+
