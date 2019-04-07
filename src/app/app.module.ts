@@ -6,6 +6,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatTableModule, MatTable } from '@angular/material/table';
+import { MatDividerModule } from '@angular/material/divider';
+
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
@@ -21,12 +26,11 @@ import { NewsletterformComponent } from './newsletterform/newsletterform.compone
 import { EmailListService } from './email-list.service';
 import { ProductDataService } from './product-data.service';
 import { CartService } from './cart.service';
-import { AddtocartModalComponent } from './addtocart-modal/addtocart-modal.component';
 import { ModalService } from './modal.service';
 import { HomeComponent } from './home/home.component';
-import { CatalogComponent } from './catalog/catalog.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { AddtocartModalComponent } from './addtocart-modal/addtocart-modal.component';
 
 @NgModule({
   declarations: [
@@ -37,14 +41,14 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
     TrustBadgesComponent,
     FooterComponent,
     NewsletterformComponent,
-    AddtocartModalComponent,
     HomeComponent,
-    CatalogComponent,
     CheckoutComponent,
-    ShoppingCartComponent
+    ShoppingCartComponent,
+    AddtocartModalComponent
   ],
   imports: [
     BrowserModule,
+    FlexLayoutModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
@@ -53,7 +57,13 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
     BrowserAnimationsModule,
     MatButtonModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    NgbModule,
+    MatTableModule,
+    MatDividerModule,
+  ],
+  exports: [
+    AddtocartModalComponent
   ],
   providers: [EmailListService, ProductDataService, CartService, ModalService],
   bootstrap: [AppComponent]

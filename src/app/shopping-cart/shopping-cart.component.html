@@ -1,3 +1,51 @@
-<p>
-  shopping-cart works!
-</p>
+<div class="container">
+  <div class="header"
+    fxLayout 
+    fxLayout.xs="column"
+    fxLayoutAlign="center"
+    fxLayoutGap="10px"
+    fxLayoutGap.xs="0">
+
+    <div class="title"
+    fxFlex="100%">
+      <h1>Shopping Cart</h1>
+      <h1>&#x00028;{{getCartCount()}} Items&#x00029;</h1>
+    </div>
+  </div>
+  <mat-divider></mat-divider>
+  <div class="cart-body"
+    fxLayout
+    fx.Layout.xs="column"
+    fxLayoutGap = "60px"
+    fxLayoutGap.xs="0">
+    <div class="table" fxFlex="70%">
+      <div class="table-keys"  fxLayout  fxLayoutAlign="center"  fxLayout.xs="column" fxLayoutGap = "0">
+        <div fxFlex="50%">
+          <h4>Product</h4>
+        </div>
+        <div fxFlex="25%">
+          <h4>Quantity</h4>
+        </div>
+        <div fxFlex="25%">
+          <h4>Price</h4>
+        </div>
+      </div>
+      <mat-divider></mat-divider>
+      <div class="table-data"  *ngFor="let product of getCart()"  fxLayout   fxLayoutAlign="center" fxLayoutGap = "0">
+          <div class="product" fxFlex="50%">
+            <img src="{{product.img_url}}">
+            <p>{{product.name}}</p>
+          </div>
+          <div class="quantity" fxFlex="25%">
+            <p>{{product.quantity}}</p>
+          </div>
+          <div class="price" fxFlex>
+            <p>{{product.price * product.quantity}}</p>
+          </div>
+      </div>
+    </div>
+    <div class="order-summary" fxFlex fxLayout="column">
+      <button type="button" mat-button class="btn btn-checkout">Checkout</button>
+    </div>
+  </div>
+</div>

@@ -42,11 +42,11 @@
           <button mat-button id="continue_btn" (click)="changeModalStatus(false)">Continue Shopping</button>
         </div>
         <div class="item" *ngIf="!cartEmpty; else elseBlock">
-            <a routerLink="/checkout"><button mat-stroked-button id="checkout_btn">Checkout</button></a>
+            <a routerLink="/shopping-cart"><button mat-stroked-button id="checkout_btn">Go to cart</button></a>
         </div>
         <ng-template #elseBlock>
             <div class="item">
-                <a routerLink="/checkout"><button mat-stroked-button disabled id="checkout_disabled">Checkout</button></a>
+                <a routerLink="/shopping-cart"><button mat-stroked-button disabled id="checkout_disabled">Go to cart</button></a>
             </div>
         </ng-template>
       </div>

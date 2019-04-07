@@ -1,0 +1,50 @@
+.container {
+    margin: 20px 60px;
+    height: 500px;
+}
+
+.title {
+    display: inline-flex;
+    font-family: 'Karla', sans-serif;
+}
+
+.title mat-divider {
+    margin: 8px 10px 40px 10px;
+}
+
+.title h1 {
+    margin: 40px;
+    font-size: 35px;
+}
+
+.title p {
+    margin: auto 0;
+    font-size: 35px;
+}
+
+.cart-body {
+    margin-top: 50px;
+    margin-bottom: 25px;
+    height: 400px;
+}
+
+.product img {
+    width: 100px;
+    height:100px;
+}
+
+.table {
+    border-radius: 2px;
+    border: 1px solid red;
+    padding: 15px;
+}
+
+.table-keys h4 {
+    margin-bottom: 10px;
+}
+
+.order-summary {
+    border-radius: 2px;
+    background-color: #6e6e6e;
+    height: 250px;
+}

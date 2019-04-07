@@ -42,8 +42,4 @@ export class CartService {
   getCart() {
     return this.cart;
   }
-
-
-  
-
 }

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ModalService } from '../modal.service';
 import { CartService } from '../cart.service';
 import { Subscriber, Subscription } from 'rxjs';
-import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-addtocart-modal',
@@ -30,6 +29,7 @@ export class AddtocartModalComponent implements OnInit {
     this._subscription.unsubscribe();
     this.modal_service.cartEmpty.subscribe(cartEmpty => this.cartEmpty = cartEmpty).unsubscribe;
   }
+
   getCartCount() {
     if(this.products.length == 1) { //If the cart has only 1 product
       this.cartItemsNumber = this.products[0].quantity; //Set it to the quantity

@@ -15,10 +15,6 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'catalog',
-    component: CatalogComponent
-  },
-  {
     path: 'checkout',
     component: CheckoutComponent
   },
@@ -33,6 +29,10 @@ const routes: Routes = [
   {
     path: 'about',
     loadChildren: '../app/about/about.module#AboutModule'
+  },
+  {
+    path: 'catalog',
+    loadChildren: '../app/catalog/catalog.module#CatalogModule'
   }
 ];
 
