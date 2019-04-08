@@ -11,7 +11,6 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatTableModule, MatTable } from '@angular/material/table';
 import { MatDividerModule } from '@angular/material/divider';
 
-
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
@@ -30,7 +29,7 @@ import { ModalService } from './modal.service';
 import { HomeComponent } from './home/home.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
-import { AddtocartModalComponent } from './addtocart-modal/addtocart-modal.component';
+import { ModalModule } from './addtocart-modal/modal.module';
 
 @NgModule({
   declarations: [
@@ -44,7 +43,6 @@ import { AddtocartModalComponent } from './addtocart-modal/addtocart-modal.compo
     HomeComponent,
     CheckoutComponent,
     ShoppingCartComponent,
-    AddtocartModalComponent
   ],
   imports: [
     BrowserModule,
@@ -61,10 +59,8 @@ import { AddtocartModalComponent } from './addtocart-modal/addtocart-modal.compo
     NgbModule,
     MatTableModule,
     MatDividerModule,
-  ],
-  exports: [
-    AddtocartModalComponent
-  ],
+    ModalModule
+   ],
   providers: [EmailListService, ProductDataService, CartService, ModalService],
   bootstrap: [AppComponent]
 })

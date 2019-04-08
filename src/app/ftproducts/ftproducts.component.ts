@@ -2,7 +2,6 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ProductDataService } from '../product-data.service';
 import { CartService } from '../cart.service';
 import { ModalService } from '../modal.service';
-import { AddtocartModalComponent } from '../addtocart-modal/addtocart-modal.component';
 import { Subscription } from 'rxjs';
 
 @Component({
