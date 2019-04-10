@@ -56,6 +56,12 @@ export class CartService {
     if(this.cart.length === 1) {
       this.cart = [];
       this.setCartEmpty(true);
+    }else if (this.cart.length > 1) {
+      this.cart.forEach((element, i) => {
+        if(element.id === index) {
+          this.cart.splice(i, 1);
+        }
+      });
     }
   }
 
