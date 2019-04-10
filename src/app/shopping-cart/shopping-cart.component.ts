@@ -8,19 +8,34 @@ import { CartService } from '../cart.service';
 })
 export class ShoppingCartComponent implements OnInit {
 
-  
-  
+  subtotal: string;
+  shipping: number;
+  taxes: number;
+  orderTotal: string;
+  cartEmpty: boolean;
 
-  constructor(private cart_service: CartService) { }
+  constructor(private cartService: CartService) { }
 
   ngOnInit() {
+    this.cartService.cartEmpty.subscribe(cartEmpty => this.cartEmpty = cartEmpty);
   }
 
   getCartCount() {
-    return this.cart_service.getCart().length;
+    return this.cartService.getCart().length;
   }
 
   getCart() {
-    return this.cart_service.getCart();
+    return this.cartService.getCart();
   }
+
+  getSubtotal() {
+    this.subtotal = this.cartService.getSubtotal();
+    return this.subtotal;
+  }
+
+  getOrderTotal() {
+    this.orderTotal = this.cartService.getOrderTotal();
+    return this.orderTotal;
+  }
+
 }

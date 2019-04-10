@@ -25,7 +25,7 @@ export class FtproductsComponent implements OnInit {
     this.products = this.product_service.getFeaturedProducts();
     this._subscription = this.modal.modal_isOpen.subscribe(modal_isOpen => this.modal_isOpen = modal_isOpen);
     this.modal.addedtocart_index.subscribe(addedtocart_index => this.addedtocart_index = this.addedtocart_index);
-    this.modal.cartEmpty.subscribe(cartEmpty => this.cartEmpty = cartEmpty);
+    this.cart_service.cartEmpty.subscribe(cartEmpty => this.cartEmpty = cartEmpty);
   }
 
   ngOnDestroy() {
@@ -33,10 +33,10 @@ export class FtproductsComponent implements OnInit {
   }
 
   checkCartEmptiness() {
-    if(this.products.length == 0) {
-      this.cartEmpty = true;
+    if(this.products.length === 0) {
+      this.cart_service.setCartEmpty(true);
     } else {
-      this.cartEmpty = false;
+      this.cart_service.setCartEmpty(false);
     }
 
     console.log('checked cart emptiness', this.cartEmpty);
@@ -49,7 +49,7 @@ export class FtproductsComponent implements OnInit {
   }
 
   openModal() {
-    this.modal.changeModalStatus(true, this.cartEmpty);
+    this.modal.changeModalStatus(true);
     console.log("modal is open")
     this.checkCartEmptiness();
   }

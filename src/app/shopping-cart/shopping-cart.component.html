@@ -1,13 +1,7 @@
-<div class="container">
-  <div class="header"
-    fxLayout 
-    fxLayout.xs="column"
-    fxLayoutAlign="center"
-    fxLayoutGap="10px"
-    fxLayoutGap.xs="0">
+<div class="container" *ngIf="!cartEmpty; else elseBlock">
+  <div class="header">
 
-    <div class="title"
-    fxFlex="100%">
+    <div class="title">
       <h1>Shopping Cart</h1>
       <h1>&#x00028;{{getCartCount()}} Items&#x00029;</h1>
     </div>
@@ -37,15 +31,35 @@
             <p>{{product.name}}</p>
           </div>
           <div class="quantity" fxFlex="25%">
-            <p>{{product.quantity}}</p>
+            <p>
+              <mat-form-field>
+                <input matInput type="number" required step="1" min="1" max="''" name="quantity" [(ngModel)]="product.quantity">
+              </mat-form-field>
+            </p>
           </div>
           <div class="price" fxFlex>
-            <p>{{product.price * product.quantity}}</p>
+            <p>{{product.price * product.quantity}}$</p>
           </div>
       </div>
     </div>
     <div class="order-summary" fxFlex fxLayout="column">
-      <button type="button" mat-button class="btn btn-checkout">Checkout</button>
+      <h4 fxFlex="20%">Order Summary</h4>
+      <div class="cost" fxFlex="40%" >
+        <p>Subtotal: <span class="value">{{getSubtotal()}}$</span></p>
+        <p>Shipping* : <span class="value"></span></p>
+        <p>Taxes*: <span class="value"></span></p>
+        <p><strong>Order Total: <span class="value">{{getOrderTotal()}}$</span></strong></p>
+      </div>
+      <div fxFlex="40%">
+        <p class="note">*Shipping and Taxes are calculated at checkout</p>
+        <button type="button" routerLink="/checkout" mat-button class="btn btn-checkout">Checkout</button>
+      </div>  
     </div>
   </div>
 </div>
+<ng-template #elseBlock>
+  <div class="cart-empty">
+    <h1>Cart is empty</h1>
+    <button type="button" mat-button routerLink="/catalog" >Continue Shopping</button>
+  </div>
+</ng-template>
