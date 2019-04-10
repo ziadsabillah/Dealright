@@ -20,6 +20,10 @@ export class ShoppingCartComponent implements OnInit {
     this.cartService.cartEmpty.subscribe(cartEmpty => this.cartEmpty = cartEmpty);
   }
 
+  removeProduct(index: number) {
+    this.cartService.removeFromCart(index);
+  }
+
   getCartCount() {
     return this.cartService.getCart().length;
   }

@@ -19,7 +19,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     MatFormFieldModule,
     MatTableModule,
     MatButtonModule,
-    NgbModule
+    NgbModule,
   ],
   exports: [
     AddtocartModalComponent

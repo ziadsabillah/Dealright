@@ -23,7 +23,7 @@
         </td>
         <td  class="price column">
           <h6>Price</h6>
-          <p>{{product.price * product.quantity}}$</p>
+          <p>{{(product.price * product.quantity).toFixed(2)}}$</p>
         </td>
       </tr>
     </div>
@@ -46,7 +46,7 @@
         </div>
         <ng-template #elseBlock>
             <div class="item">
-                <a routerLink="/shopping-cart"><button mat-stroked-button disabled id="checkout_disabled">Go to cart</button></a>
+                <a><button mat-stroked-button disabled id="checkout_disabled">Go to cart</button></a>
             </div>
         </ng-template>
       </div>

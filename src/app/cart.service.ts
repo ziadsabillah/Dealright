@@ -57,7 +57,7 @@ export class CartService {
       this.cart = [];
       this.setCartEmpty(true);
     }
-  } 
+  }
 
   getCart() {
     return this.cart;

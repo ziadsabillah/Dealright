@@ -186,5 +186,12 @@ button:hover {
 
 }
 
+.close {
+    margin-bottom: 15px;
+}
+.remove {
+    align-self: center;
+}
+
 
 

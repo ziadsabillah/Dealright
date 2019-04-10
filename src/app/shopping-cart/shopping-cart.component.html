@@ -38,7 +38,10 @@
             </p>
           </div>
           <div class="price" fxFlex>
-            <p>{{product.price * product.quantity}}$</p>
+            <p>{{(product.price * product.quantity).toFixed(2)}}$</p>
+          </div>
+          <div class="remove">
+            <span class="close" (click)="removeProduct(product.id)">&times;</span>
           </div>
       </div>
     </div>
